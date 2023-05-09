@@ -1,3 +1,22 @@
-const h2 = document.createElement("h2");
-h2.textContent = "This conent added by JavaScript";
-document.querySelector("body").appendChild(h2);
+function set(num){
+    let v = document.getElementById("output");
+    v.value += num;
+}
+
+const loadCalc = document.getElementById("loadCalculator");
+const loadToDo = document.getElementById("loadToDo");
+const loadHome = document.getElementById("loadHome");
+
+$(".pageLoad").load("./home.html");
+
+loadCalc.addEventListener("click", ()=>{
+    $(".pageLoad").load("./calculator.html");
+})
+
+loadToDo.addEventListener("click", ()=>{
+    $(".pageLoad").load("./toDo.html");
+})
+
+loadHome.addEventListener("click", ()=>{
+    $(".pageLoad").load("./home.html");
+})
