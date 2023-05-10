@@ -1,0 +1,12 @@
+#listItems{
+    background-color: black;
+    list-style: none;
+}
+
+#listItems li{
+    background-color: white;
+    width: fit-content;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    height: 2rem;
+}

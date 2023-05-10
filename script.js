@@ -1,22 +1,17 @@
-function set(num){
-    let v = document.getElementById("output");
-    v.value += num;
-}
-
-const loadCalc = document.getElementById("loadCalculator");
-const loadToDo = document.getElementById("loadToDo");
-const loadHome = document.getElementById("loadHome");
+const loadCalcPage = document.getElementById("loadCalculator");
+const loadToDoPage = document.getElementById("loadToDo");
+const loadHomePage = document.getElementById("loadHome");
 
 $(".pageLoad").load("./home.html");
 
-loadCalc.addEventListener("click", ()=>{
+loadCalcPage.addEventListener("click", ()=>{
     $(".pageLoad").load("./calculator.html");
 })
 
-loadToDo.addEventListener("click", ()=>{
+loadToDoPage.addEventListener("click", ()=>{
     $(".pageLoad").load("./toDo.html");
 })
 
-loadHome.addEventListener("click", ()=>{
+loadHomePage.addEventListener("click", ()=>{
     $(".pageLoad").load("./home.html");
 })
