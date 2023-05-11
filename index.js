@@ -24,6 +24,7 @@ entBtn.addEventListener("click", (e)=>{
         checkBox.addEventListener("click", ()=>{
             checkBox.style.backgroundColor = "limegreen";
         })
+        
         todoItem.appendChild(todoText);
         todoItem.appendChild(checkBox);
         todoItem.appendChild(trashButton);

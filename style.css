@@ -6,6 +6,7 @@ body{
     max-width: fit-content;
     padding: 5rem 5rem 5rem 5rem;
     background-color: orange;
+    border: solid darkred .2rem;
     border-radius: 2rem;
     margin-left: auto;
     margin-right: auto; 
@@ -13,7 +14,7 @@ body{
 }
 
 .container h1{
-    background-color: lightblue;
+    background-color: cyan;
     border-radius: 100rem;
     text-align: center;
     width: fit-content;
@@ -21,7 +22,7 @@ body{
     padding-left: .5rem;
     padding-right: .5rem;
     margin-top: 1rem;
-    margin-left: auto;
+
     margin-right: auto;
 }
 
@@ -29,7 +30,7 @@ body{
     font-size: 2rem;
     width: 15ch;
     border: solid white .1rem;
-    border-radius: 100rem;
+    border-radius: 100rem 0rem 0rem 100rem;
 }
 
 .container #EnterItem{
@@ -65,15 +66,10 @@ body{
     margin-bottom: .1rem;
 }
 
-#toDolist li:hover{
-    background-color: white;
-}
-
 #toDoList li span{
     margin-right: 1rem;
     font-size: 2rem;
 }
-
 
 
 #checkBox{
@@ -87,7 +83,7 @@ body{
 }
 
 #checkBox:hover{
-    border: solid green .1rem;
+    border: solid yellow .1rem;
 }
 
 
@@ -107,5 +103,5 @@ body{
 }
 
 #trashButton:hover{
-    border: solid green .1rem; 
+    border: solid yellow .1rem; 
 }
