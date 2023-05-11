@@ -1,12 +1,73 @@
-#listItems{
-    background-color: black;
-    list-style: none;
+body{
+    background-color: aqua;
 }
 
-#listItems li{
+.container{
+    max-width: fit-content;
+    padding: 1rem 1rem 1rem 1rem;
+    background-color: orange;
+}
+
+.container h1{
     background-color: white;
-    width: fit-content;
+    border-radius: 100rem;
+    text-align: center;
+    width: 50%;
+    font-size: 1rem;
     margin-top: 1rem;
-    margin-bottom: 1rem;
+}
+
+.container input{
+    width: 15ch;
+}
+
+.container button{
+    border-radius: 100rem;
+    width: fit-content;
+    background-color: white;
+    border: solid gray .15rem;
+}
+
+#toDoList{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+}
+
+#toDoList li{
+    background-color: lightgrey;
+    width: fit-content;
     height: 2rem;
+    border-radius: 100rem;
+    padding-left: 1rem;
+    padding-right: .5rem;
+    display: flex;
+    align-items:center;
+}
+
+#toDoList li span{
+    margin-right: 1rem;
+}
+
+#checkBox{
+    border: solid gray .1rem;
+}
+
+#checkBox i{
+    color: black;
+}
+
+#checkBox:hover{
+    border: solid green .1rem;
+}
+
+#trashButton i{
+    color: white;
+}
+
+#trashButton{
+    display: flex;
+    justify-content: center;
+    background-color: red;
 }
