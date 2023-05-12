@@ -1,10 +1,11 @@
 const entBtn = document.getElementById("EnterItem");
 let userInput = document.getElementById('toDo');
+let itemCount = 0;
 
 entBtn.addEventListener("click", (e)=>{
     e.preventDefault();
 
-    if(userInput.value !== ""){
+    if(userInput.value !== "" && itemCount <= 12){
         const listOfItems = document.getElementById("toDoList");
         let checkBox = document.createElement('button');
         let todoItem = document.createElement('li');
@@ -17,6 +18,7 @@ entBtn.addEventListener("click", (e)=>{
         trashButton.innerHTML = '<i>&#10006;</i>'
         trashButton.addEventListener("click", ()=>{
             todoItem.remove();
+            itemCount--;
         })
         
         checkBox.setAttribute("id", "checkBox");
@@ -29,10 +31,12 @@ entBtn.addEventListener("click", (e)=>{
         todoItem.appendChild(checkBox);
         todoItem.appendChild(trashButton);
         listOfItems.appendChild(todoItem);
+        itemCount++;
 
     }else{
-        alert("You must enter something!");
+        alert("You must enter something or their are too many items in list.");
     }
+    userInput.value = "";
 })
 
 
