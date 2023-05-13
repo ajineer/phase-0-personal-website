@@ -92,41 +92,44 @@ body{
 }
 
 #toDoList li{
-    position: relative;
     display: flex;
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: auto;
     flex-direction: row;
-    overflow: auto;
-    background-color: blue;
-    max-width: fit-content;
+    align-items: center;
+    background-color: rgb(86, 70, 227); 
     height: 2rem;
-    border-radius: 100rem 0rem 0rem 100rem;
+    padding-right: none;
     padding-left: 1rem;
-    padding-right: 0;
-    padding-top: 0;
-    padding-bottom: 0;
-    align-items:center;
-    margin-top: .1rem;
-    margin-bottom: .1rem;
+    padding-top: none;
+    padding-bottom: none;
+    width: fit-content;
+    border-radius: 100rem 0 0 100rem;
+}
+
+#trashButton{
+    background-color: cyan;
+    float: none;
+    height: 2rem;
+    width: 2rem;
+    padding: 0;
+    margin: 0;
+}
+
+#toDoList li .boxCheck{
+    background-color: cyan;
+    height: 2rem;
+    width: 2rem;
+    padding: 0;
+    margin: 0;
 }
 
 #toDoList li p{
+    text-align: center;
     margin-right: 1rem;
     max-width: 15ch;
     font-size: 1.5rem;
     color: white;
     overflow-wrap: break-word;
-}
-
-#toDoList li #buttons{
-    height: 100%;
-    background-color: pink;
-}
-
-#toDoList li:nth-child(2){
-    float: none;
-    position: absolute;
-    height: 2rem;
-    padding: 0;
-    margin: 0;
-    border-style: none;
 }
