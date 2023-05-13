@@ -92,53 +92,41 @@ body{
 }
 
 #toDoList li{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    overflow: auto;
     background-color: blue;
     max-width: fit-content;
     height: 2rem;
-    border-radius: 100rem;
+    border-radius: 100rem 0rem 0rem 100rem;
     padding-left: 1rem;
-    padding-right: .5rem;
-    display: flex;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
     align-items:center;
     margin-top: .1rem;
     margin-bottom: .1rem;
 }
 
-#toDoList li span{
+#toDoList li p{
     margin-right: 1rem;
-    font-size: 2rem;
+    max-width: 15ch;
+    font-size: 1.5rem;
     color: white;
+    overflow-wrap: break-word;
 }
 
-
-#checkBox{
-    border: solid gray .1rem;
-    width: fit-content;
-    border-radius: 100rem;
+#toDoList li #buttons{
+    height: 100%;
+    background-color: pink;
 }
 
-#checkBox i{
-    color: black;
-}
-
-#checkBox:hover{
-    border: solid yellow .1rem;
-}
-
-#trashButton{
-    display: flex;
-    width: fit-content;
-    justify-content: center;
-    border: solid gray .1rem;
-    background-color: red;
-    border-radius: 100rem;
-    margin-left: .1rem;
-}
-
-#trashButton i{
-    color: white;
-}
-
-#trashButton:hover{
-    border: solid yellow .1rem; 
+#toDoList li:nth-child(2){
+    float: none;
+    position: absolute;
+    height: 2rem;
+    padding: 0;
+    margin: 0;
+    border-style: none;
 }
