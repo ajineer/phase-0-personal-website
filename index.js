@@ -2,12 +2,21 @@ const entBtn = document.getElementById("EnterItem");
 let userInput = document.getElementById('toDo');
 let itemCount = 0;
 
+function createNewElement(tagName, idName, aClassName){
+    let newElm = document.createElement(tagName);
+    newElm.setAttribute("id", idName);
+    newElm.setAttribute("class", aClassName);
+    return newElm;
+}
+
 entBtn.addEventListener("click", (e)=>{
+
     e.preventDefault();
 
     if(userInput.value !== "" && itemCount <= 12){
         const listOfItems = document.getElementById("toDoList");
-        let checkBox = document.createElement('button');
+        //let checkBox = document.createElement('button');
+        let checkBox = createNewElement("button", "checKBox", "");
         let todoItem = document.createElement('li');
         let trashButton = document.createElement('button');
         let todoText = document.createElement('span');
@@ -21,7 +30,7 @@ entBtn.addEventListener("click", (e)=>{
             itemCount--;
         })
         
-        checkBox.setAttribute("id", "checkBox");
+        //checkBox.setAttribute("id", "checkBox");
         checkBox.innerHTML = '<i>&check;</i>';
         checkBox.addEventListener("click", ()=>{
             checkBox.style.backgroundColor = "limegreen";
