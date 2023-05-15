@@ -105,11 +105,13 @@ body{
     padding-top: none;
     padding-bottom: none;
     width: fit-content;
-    border-radius: 100rem 0 0 100rem;
+    border-radius: 100rem;
 }
 
 #trashButton{
-    background-color: cyan;
+    background-color: red;
+    border: solid gray .1rem;
+    border-radius: 0 100rem 100rem 0;
     float: none;
     height: 2rem;
     width: 2rem;
@@ -117,12 +119,21 @@ body{
     margin: 0;
 }
 
+#trashButton:hover{
+    border: solid yellow .1rem;
+} 
+
 #toDoList li .boxCheck{
-    background-color: cyan;
+    background-color: limegreen;
+    border: solid gray .1rem; 
     height: 2rem;
     width: 2rem;
     padding: 0;
     margin: 0;
+}
+
+#toDoList li .boxCheck:hover{
+    border: solid yellow .1rem;
 }
 
 #toDoList li p{

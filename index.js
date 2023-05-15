@@ -13,6 +13,7 @@ function createNewElement(tagName, idName, aClassName){
 entBtn.addEventListener("click", (e)=>{
 
     e.preventDefault();
+    let checked = false;
 
     if(userInput.value !== "" && itemCount <= 12 && charCount <= 14){
         const listOfItems = document.getElementById('toDoList');
@@ -34,7 +35,15 @@ entBtn.addEventListener("click", (e)=>{
         itemCount++;
 
         completeBox.addEventListener("click", ()=>{
-            completeBox.style.backgroundColor = "limegreen";
+            if(checked === false){
+                completeBox.style.backgroundColor = "green";
+                checked = true;
+                todoText.style.textDecoration = "Line-through";
+            }else{
+                completeBox.style.backgroundColor = "limegreen";
+                checked = false;
+                todoText.style.textDecoration = "none";
+            }
         })
 
         trashButton.addEventListener("click", ()=>{
